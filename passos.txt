@@ -7,12 +7,34 @@ git config --global user.email matheushe94@gmail.com
 criar um projeto MVC
 dotnet new mvc -o MathFlix
 
---
+---
+
+Criar as classes de dados - Pasta Models
 
 Instalar os Pacotes necessários:
-    shift + ctrl + p -> Nuget
+    Shift + Ctrl + P -> Nuget
     Pesquisar e Instalar:
         EntityframeworkCore
         EntityframeworkCore.Design
         EntityframeworkCore.Tools
+        Pomelo
 
+
+Criar uma pasta Data - AppDbContext
+
+Criar uma pasta Data - AppDbContext
+
+Criar a ConnectionString no Arquivo appsettings.json
+
+Criar o serviço de DbContext no Program.cs
+
+--
+
+dotnet tool install -g dotnet-aspnet-codegenerator --version 8.0.1
+
+CRIAR UM CONTROLLER - CRUD:
+dotnet-aspnet-codegenerator controller -name GenresController -m Genre -dc AppDbContext -outDir Controllers -udl
+
+Instalar Pacotes:
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+Microsoft.EntityFrameworkCore.SqlServer
